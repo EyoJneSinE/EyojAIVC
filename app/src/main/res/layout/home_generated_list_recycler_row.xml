@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/main_background_color"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/homeGeneratedCardView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/home_generated_cardView_height"
+        android:layout_marginTop="@dimen/home_generated_cardView_margin"
+        android:layout_marginHorizontal="@dimen/home_generated_cardView_margin"
+        app:cardCornerRadius="@dimen/home_generated_cardView_corner_radius"
+        android:elevation="@dimen/home_generated_cardView_elevation"
+        android:backgroundTint="@color/home_generated_list_cardView_background_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/homeGeneratedImageView"
+                android:layout_width="@dimen/home_generated_imageView_size"
+                android:layout_height="@dimen/home_generated_imageView_size"
+                android:foreground="@drawable/circle_background"
+                android:paddingHorizontal="2dp"
+                android:src="@drawable/elon_mask_pic"
+                android:layout_marginStart="@dimen/home_generated_imageView_margin"
+                android:layout_marginVertical="@dimen/home_generated_imageView_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/homeGeneratedIdTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_1"
+                android:textSize="@dimen/home_generated_id_text_size"
+                android:textStyle="bold"
+                android:maxLines="@integer/home_generated_maxLines"
+                android:textAlignment="textStart"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="@dimen/home_generated_id_margin"
+                android:text="@string/home_generated_list_id"
+                android:fontFamily="@font/poppins"
+                app:layout_constraintTop_toTopOf="@+id/homeGeneratedImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/homeGeneratedImageView"/>
+
+            <TextView
+                android:id="@+id/homeGeneratedTitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/home_generated_list_voiceWho_name"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="@dimen/home_generated_id_margin"
+                android:textAlignment="textStart"
+                android:textColor="@color/text_color_1"
+                android:textSize="@dimen/home_generated_title_text_size"
+                app:layout_constraintBottom_toBottomOf="@+id/homeGeneratedImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/homeGeneratedImageView"
+                app:layout_constraintTop_toTopOf="@+id/homeGeneratedImageView" />
+
+            <TextView
+                android:id="@+id/homeGeneratedContentsTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/home_generated_list_wrote_text"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="@dimen/home_generated_id_margin"
+                android:textAlignment="textStart"
+                android:maxLines="@integer/home_generated_contents_maxLines"
+                android:textColor="@color/text_color_1"
+                android:textSize="@dimen/home_generated_contents_text_size"
+                app:layout_constraintBottom_toBottomOf="@+id/homeGeneratedImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/homeGeneratedImageView"
+                app:layout_constraintTop_toBottomOf="@+id/homeGeneratedTitleTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

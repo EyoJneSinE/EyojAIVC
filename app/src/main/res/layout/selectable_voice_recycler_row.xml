@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/selectableItemLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/main_background_color">
+
+    <ImageView
+        android:id="@+id/selectableVoiceImageView"
+        android:layout_width="@dimen/selectable_voice_recycler_row_image_size"
+        android:layout_height="@dimen/selectable_voice_recycler_row_image_size"
+        android:layout_marginTop="@dimen/selectable_voice_image_margin_top"
+        android:layout_marginEnd="@dimen/selectable_voice_image_margin_end"
+        android:paddingHorizontal="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/elon_mask_pic"
+        android:foreground="@drawable/circle_background"/>
+
+    <TextView
+        android:id="@+id/selectableVoiceTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/selectable_voice_text_margin"
+        android:layout_marginBottom="@dimen/selectable_voice_text_margin"
+        android:text="@string/selectable_voice_name"
+        android:textColor="@color/text_color_1"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/selectableVoiceImageView"
+        app:layout_constraintStart_toStartOf="@+id/selectableVoiceImageView"
+        app:layout_constraintTop_toBottomOf="@+id/selectableVoiceImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

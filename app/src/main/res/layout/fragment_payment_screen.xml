@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background_color"
+    tools:context=".presentation.payment.PaymentScreenFragment">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/home_pmnt_pic_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/home_pymnt_pic_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/payment_screen_margin_t"
+        android:src="@drawable/home_pymnt_pic_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/payment_screen_margin_t"
+        android:src="@drawable/home_pymnt_pic_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/payment_screen_view_height"
+        android:background="@drawable/display_divider_gradient"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/payment_screen_margin_t_n"
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="@string/try_premium"
+        android:textAlignment="center"
+        android:textColor="@color/text_color_1"
+        android:textSize="@dimen/payment_screen_headline_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:lineHeight="41dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="319dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/limited_ads_margin_s"
+        android:drawablePadding="@dimen/limited_ads_drawable_padding"
+        android:fontFamily="@font/poppins"
+        android:text="@string/limited_ads"
+        android:textAlignment="textStart"
+        android:textColor="@color/text_color_1"
+        android:textSize="@dimen/limited_ads_text_size"
+        app:drawableStartCompat="@drawable/icon_premium"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/limited_ads_drawable_padding"
+        android:fontFamily="@font/poppins"
+        android:text="@string/using_example_prompts"
+        android:textAlignment="center"
+        android:textColor="@color/text_color_1"
+        android:textSize="@dimen/limited_ads_text_size"
+        app:drawableStartCompat="@drawable/icon_premium"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/limited_ads_drawable_padding"
+        android:fontFamily="@font/poppins"
+        android:text="@string/reach_all_rappers_and_beats"
+        android:textAlignment="center"
+        android:textColor="@color/text_color_1"
+        android:textSize="@dimen/limited_ads_text_size"
+        app:drawableStartCompat="@drawable/icon_premium"
+        app:layout_constraintBottom_toTopOf="@+id/paymentScreenLifeTimeButton"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/paymentScreenLifeTimeButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/life_time_button_height"
+        android:layout_marginStart="@dimen/life_time_button_margin_s"
+        android:layout_marginTop="@dimen/life_time_button_margin_t"
+        android:layout_marginEnd="@dimen/life_time_button_margin_e"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="30dp"
+        android:background="@drawable/button_border"
+        app:cardElevation="2dp"
+        app:checkedIcon="@null"
+        app:layout_constraintBottom_toTopOf="@+id/paymentScreenContinueButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:background="@drawable/button_border">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/payment_circular_icon"
+                android:layout_marginBottom="11dp"
+                android:layout_marginStart="@dimen/life_time_button_image_margin_s"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lifetime"
+                android:textSize="@dimen/life_time_button_text_size"
+                android:fontFamily="@font/poppins"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/text_color_1"
+                android:layout_marginStart="@dimen/life_time_button_text_margin_s"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toTopOf="@+id/imageView7"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView7"/>
+
+            <TextView
+                android:id="@+id/premiumPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_1"
+                android:text="@string/payment_screen_cost_price"
+                android:textSize="@dimen/life_time_button_text_size"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins"
+                android:textAlignment="textEnd"
+                android:layout_marginEnd="@dimen/life_time_button_text_margin_e"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView7"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView7"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/paymentScreenContinueButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/payment_screen_continue_button_height"
+        android:layout_marginTop="@dimen/payment_screen_continue_button_margin_t"
+        android:layout_marginBottom="@dimen/payment_screen_continue_button_margin_b"
+        android:background="@drawable/button_gradient"
+        android:elevation="@dimen/payment_screen_continue_button_elevation"
+        android:fontFamily="@font/poppins"
+        android:shadowColor="@color/button_generate_shadow_color"
+        android:shadowDx="0"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:stateListAnimator="@null"
+        android:text="Continue"
+        android:textAppearance="@font/poppins"
+        android:textColor="@color/text_color_white_transparent"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/paymentScreenLifeTimeButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/paymentScreenLifeTimeButton"
+        app:layout_constraintTop_toBottomOf="@+id/paymentScreenLifeTimeButton" />
+
+    <ImageView
+        android:id="@+id/paymentScreenCloseButton"
+        android:layout_width="@dimen/payment_screen_close_button_size"
+        android:layout_height="@dimen/payment_screen_close_button_size"
+        android:layout_marginTop="@dimen/payment_screen_close_button_margin_t"
+        android:layout_marginEnd="@dimen/payment_screen_close_button_margin_e"
+        android:src="@drawable/close_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="3dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divider2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentScreenContinueButton" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="3dp"
+        android:layout_height="20dp"
+        android:background="@color/black"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toTopOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/tvPrivacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:text="Privacy Policy"
+        android:textAppearance="@style/privacy"
+        app:layout_constraintBottom_toBottomOf="@id/divider"
+        app:layout_constraintEnd_toStartOf="@id/divider"
+        app:layout_constraintTop_toTopOf="@id/divider" />
+
+    <TextView
+        android:id="@+id/tvRestore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:text="Restore Purchase"
+        android:textAppearance="@style/privacy"
+        app:layout_constraintBottom_toBottomOf="@id/divider"
+        app:layout_constraintEnd_toStartOf="@id/divider2"
+        app:layout_constraintStart_toEndOf="@id/divider"
+        app:layout_constraintTop_toTopOf="@id/divider" />
+
+    <TextView
+        android:id="@+id/tvTerms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:text="Terms of Use"
+        android:textAppearance="@style/privacy"
+        app:layout_constraintBottom_toBottomOf="@id/divider"
+        app:layout_constraintStart_toEndOf="@id/divider2"
+        app:layout_constraintTop_toTopOf="@id/divider" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:visibility="gone" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

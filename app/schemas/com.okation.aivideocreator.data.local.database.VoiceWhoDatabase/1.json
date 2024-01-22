@@ -1,0 +1,64 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "ce901cdcdb982f0175d7d6848ec64da2",
+    "entities": [
+      {
+        "tableName": "voice_who_model",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`voiceWhoName` TEXT NOT NULL, `voiceWhoImage` INTEGER NOT NULL, `voiceWhoWroteText` TEXT NOT NULL, `voiceWhoJobToken` TEXT NOT NULL, `voiceWhoMediaPath` TEXT NOT NULL, `voiceWhoId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "voiceWhoName",
+            "columnName": "voiceWhoName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "voiceWhoImage",
+            "columnName": "voiceWhoImage",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "voiceWhoWroteText",
+            "columnName": "voiceWhoWroteText",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "voiceWhoJobToken",
+            "columnName": "voiceWhoJobToken",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "voiceWhoMediaPath",
+            "columnName": "voiceWhoMediaPath",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "voiceWhoId",
+            "columnName": "voiceWhoId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "voiceWhoId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ce901cdcdb982f0175d7d6848ec64da2')"
+    ]
+  }
+}

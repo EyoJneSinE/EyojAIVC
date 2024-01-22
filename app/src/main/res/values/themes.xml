@@ -1,0 +1,52 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EyojAIVoiceChanger" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">?colorSecondary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="statusBarScrim">@color/black</item>
+        <item name="statusBarBackground">@color/black</item>
+        <item name="android:enforceStatusBarContrast">true</item>
+        <item name="statusBarForeground">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/white_transparent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarDividerColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="Theme.EyojAIVoiceChanger" parent="Base.Theme.EyojAIVoiceChanger">
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Optional: set the status bar light and content dark. -->
+    </style>
+
+    <style name="privacy">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#1E1F23</item>
+    </style>
+
+    <style name="BtnStyle" parent="ShapeAppearanceOverlay.Material3.Button">
+        <item name="android:layout_marginStart">35dp</item>
+        <item name="android:layout_marginEnd">35dp</item>
+        <item name="android:background">@drawable/selector_btn</item>
+        <item name="android:textColor">@color/share_button_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

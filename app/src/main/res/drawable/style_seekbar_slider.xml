@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/background"
+        android:height="6dp"
+        android:bottom="5dp"
+        android:top="5dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#33787880"/>
+            <corners android:radius="8dp" />
+
+        </shape>
+    </item>
+
+    <item
+        android:id="@+id/thirdProgress"
+        android:height="6dp"
+        android:top="8dp">
+        <shape>
+            <corners android:radius="8dp" />
+            <gradient
+                android:angle="20"
+                android:centerColor="#736E56FF"
+                android:centerY="1"
+                android:endColor="#736E56FF"
+                android:startColor="#736E56FF"/>
+        </shape>
+    </item>
+
+    <!--<item android:id="@android:id/secondaryProgress"
+        android:height="6dp"
+        android:top="8dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#736E56FF"/> &lt;!&ndash; Shadow color &ndash;&gt;
+            <corners android:radius="8dp" />
+        </shape>
+    </item>-->
+
+
+    <item android:id="@android:id/secondaryProgress"
+        android:height="6dp"
+        android:top="5dp"
+        android:bottom="5dp">
+        <clip
+            android:clipOrientation="horizontal"
+            android:gravity="left">
+
+            <shape android:shape="rectangle">
+                <solid android:color="#736E56FF"/> <!-- Shadow color -->
+                <corners android:radius="8dp" />
+            </shape>
+
+            <shape android:shape="rectangle">
+                <corners android:radius="24dp" />
+                <gradient
+                    android:angle="45"
+                    android:type="linear"
+                    android:endColor="#4F56FF"
+                    android:startColor="#B377FF"
+                    />
+            </shape>
+        </clip>
+
+    </item>
+</layer-list>

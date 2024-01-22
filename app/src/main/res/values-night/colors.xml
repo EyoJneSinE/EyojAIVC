@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="homeHintColor">#993C3C43</color>
+    <color name="text_color_1">#FF000000</color>
+    <color name="text_color_2">#1C1C1E</color>
+    <color name="text_color_white_transparent">#66FFFFFF</color>
+    <color name="text_color_white">#FFFFFFFF</color>
+    <color name="home_generated_list_cardView_background_color">#ECECEC</color>
+    <color name="share_button_text_color">#7764FF</color>
+    <color name="main_background_color">#FFFFFFFF</color>
+    <color name="button_generate_shadow_color">#6E56FF</color>
+    <color name="button_stroke_color">#4F56FF</color>
+</resources>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/main_background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.home.view.HomeGeneratedListFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/homeGeneratedToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/home_generated_toolbar_margin_t"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/homeGeneratedSettingsButton"
+            android:layout_width="@dimen/home_generated_settings_button_size"
+            android:layout_height="@dimen/home_generated_settings_button_size"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/home_generated_settings_button_margin_s"
+            android:src="@drawable/settings_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_voices"
+            android:textColor="@color/text_color_1"
+            android:fontFamily="@font/poppins_extrabold"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/homeGeneratedAddButton"
+            android:layout_width="@dimen/home_generated_add_button_size"
+            android:layout_height="@dimen/home_generated_add_button_size"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/home_generated_add_button_margin_e"
+            android:src="@drawable/add_icon"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/homeStartHereTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/home_start_here_margin_h"
+        android:layout_marginBottom="@dimen/home_start_here_margin_b"
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="@string/start_here"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/home_start_here_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/homeGenerateTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/homeGenerateTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/home_generate_text_margin_h"
+        android:layout_marginBottom="@dimen/home_generate_text_margin_b"
+        android:fontFamily="@font/poppins"
+        android:text="@string/generate_a_rap_song_in_a_few_easy_steps"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/home_generate_text_view_size"
+        app:layout_constraintBottom_toTopOf="@+id/homeGeneratedArrowImageView"
+        app:layout_constraintEnd_toEndOf="@+id/homeStartHereTextView"
+        app:layout_constraintStart_toStartOf="@+id/homeStartHereTextView" />
+
+    <ImageView
+        android:id="@+id/homeGeneratedArrowImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/home_generate_image_margin_b"
+        android:src="@drawable/icon_line_to_below"
+        app:layout_constraintBottom_toTopOf="@+id/homeGenerateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/homeGenerateButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/home_generate_button_height"
+        android:layout_marginTop="@dimen/home_generate_button_margin_t"
+        android:layout_marginHorizontal="@dimen/home_generate_button_margin_h"
+        android:background="@drawable/button_gradient"
+        android:elevation="@dimen/home_generate_button_elevation"
+        android:fontFamily="@font/poppins"
+        android:paddingHorizontal="@dimen/home_generate_button_padding_h"
+        android:paddingVertical="@dimen/home_generate_button_padding_v"
+        android:shadowColor="@color/button_generate_shadow_color"
+        android:shadowDx="0"
+        android:shadowDy="5"
+        android:layout_marginBottom="@dimen/home_generate_button_margin_b"
+        android:shadowRadius="@integer/home_generate_button_shadow_radius"
+        android:stateListAnimator="@null"
+        android:text="Generate"
+        android:textSize="17sp"
+        android:textAppearance="@font/poppins"
+        android:textColor="@color/text_color_white_transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homeGeneratedRecyclerView"
+        android:background="@color/main_background_color"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        tools:listitem="@layout/home_generated_list_recycler_row"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeGeneratedToolbar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background_color"
+    tools:context=".presentation.song.SongPlayingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/songGenerationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/songGenerationToolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/homeGeneratedToolbar_margin"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/songGenerationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="@string/generating_ai_voice"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_1"
+                android:textSize="@dimen/song_playing_generating_text_size"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/songGeneratingTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/songGeneratingTextView_margin_h"
+            android:layout_marginBottom="@dimen/songGeneratingTextView_margin_b"
+            android:fontFamily="@font/poppins"
+            android:paddingHorizontal="@dimen/songGeneratingTextView_padding_h"
+            android:text="@string/song_playing_your_voice_is_generating"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_1"
+            android:textSize="@dimen/songGeneratingTextView_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="@dimen/progressBar_song_size"
+            android:layout_height="@dimen/progressBar_song_size"
+            android:indeterminateDrawable="@drawable/circular_progress_gradient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/songPlayingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/homeGeneratedToolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/homeGeneratedToolbar_margin"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/songPlayingBackButton"
+                android:layout_width="@dimen/song_playing_back_button_size"
+                android:layout_height="@dimen/song_playing_back_button_size"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/song_playing_back_button_margin_start"
+                android:src="@drawable/btn_back_icon" />
+
+            <TextView
+                android:id="@+id/songPlayingGeneratingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="@string/song_playing_ai_voices_text"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_1"
+                android:textSize="@dimen/song_playing_generating_text_size"
+                android:textStyle="bold" />
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/songPlayingCircleImageView"
+            android:layout_width="@dimen/song_playing_circle_imageView_size"
+            android:layout_height="@dimen/song_playing_circle_imageView_size"
+            android:background="@drawable/background_shadow_image"
+            app:layout_constraintStart_toStartOf="@+id/songPlayingPosterImageView"
+            app:layout_constraintEnd_toEndOf="@+id/songPlayingPosterImageView"
+            app:layout_constraintTop_toTopOf="@+id/songPlayingPosterImageView"
+            app:layout_constraintBottom_toBottomOf="@+id/songPlayingPosterImageView"/>
+
+        <ImageView
+            android:id="@+id/songPlayingPosterImageView"
+            android:layout_width="@dimen/song_playing_poster_imageView_size"
+            android:layout_height="@dimen/song_playing_poster_imageView_size"
+            android:layout_marginTop="@dimen/song_playing_poster_imageView_margin_top"
+            android:src="@drawable/johnny_depp_pic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeGeneratedToolbar" />
+
+        <TextView
+            android:id="@+id/songPlayingAIVoiceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/song_playing_ai_voice_margin_top"
+            android:text="@string/song_playing_ai_voices_text"
+            android:textAlignment="center"
+            android:textSize="@dimen/song_playing_ai_voice_text_size"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/text_color_2"
+            app:layout_constraintEnd_toEndOf="@+id/songPlayingPosterImageView"
+            app:layout_constraintStart_toStartOf="@+id/songPlayingPosterImageView"
+            app:layout_constraintTop_toBottomOf="@+id/songPlayingPosterImageView" />
+
+        <TextView
+            android:id="@+id/songPlayingNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/song_playing_voiceWho_name"
+            android:textColor="@color/text_color_1"
+            android:textSize="@dimen/song_playing_name_text_size"
+            android:fontFamily="@font/poppins_bold"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/songPlayingAIVoiceTextView"
+            app:layout_constraintStart_toStartOf="@+id/songPlayingAIVoiceTextView"
+            app:layout_constraintTop_toBottomOf="@+id/songPlayingAIVoiceTextView" />
+
+        <SeekBar
+            android:id="@+id/songPlayingSeekBarSlider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="20"
+            android:splitTrack="false"
+            android:layout_marginHorizontal="@dimen/song_playing_seekBar_slider_margin_h"
+            android:layout_marginTop="@dimen/song_playing_seekBar_slider_margin_t"
+            android:paddingVertical="@dimen/song_playing_seekBar_slider_padding_v"
+            android:thumb="@drawable/seekbar_thumb"
+            android:progressDrawable="@drawable/seekbar_another_effect"
+            android:maxHeight="@dimen/song_playing_seekBar_slider_max_height"
+            android:minHeight="@dimen/song_playing_seekBar_slider_min_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/songPlayingNameTextView"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/songPlayingPlayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/song_playing_button_margin_t"
+            android:src="@drawable/btn_play"
+            app:layout_constraintTop_toBottomOf="@+id/songPlayingSeekBarSlider"
+            app:layout_constraintStart_toStartOf="@+id/songPlayingSeekBarSlider"
+            app:layout_constraintEnd_toEndOf="@+id/songPlayingSeekBarSlider"
+            tools:layout_editor_absoluteX="165dp" />
+
+        <ImageView
+            android:id="@+id/songPlayingPlayBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/song_playing_back_button_margin_e"
+            android:src="@drawable/back_15_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/songPlayingPlayButton"
+            app:layout_constraintEnd_toStartOf="@+id/songPlayingPlayButton"
+            app:layout_constraintTop_toTopOf="@+id/songPlayingPlayButton" />
+
+        <ImageView
+            android:id="@+id/songPlayingPlayForwardButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/song_playing_forward_button_margin_s"
+            android:src="@drawable/forward_15_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/songPlayingPlayButton"
+            app:layout_constraintStart_toEndOf="@+id/songPlayingPlayButton"
+            app:layout_constraintTop_toTopOf="@+id/songPlayingPlayButton" />
+
+        <Button
+            android:id="@+id/songPlayingShareButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/song_playing_share_button_height"
+            android:layout_marginBottom="@dimen/song_playing_share_button_margin_b"
+            android:background="@drawable/save_button_border"
+            android:elevation="@dimen/song_playing_share_button_elevation"
+            android:fontFamily="@font/poppins"
+            android:stateListAnimator="@null"
+            android:textAppearance="@font/poppins"
+            android:textSize="17sp"
+            android:text="@string/song_playing_share_button_text"
+            android:textColor="@color/share_button_text_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/songPlayingSeekBarSlider"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/songPlayingSeekBarSlider" />
+
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/stylePLayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:surface_type="texture_view"
+            android:visibility="gone"
+            app:shutter_background_color="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/songPlayingCurrentTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/song_playing_current_time"
+            android:textSize="@dimen/songPlayingCurrentTimeTextSize"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/text_color_1"
+            app:layout_constraintStart_toStartOf="@+id/songPlayingSeekBarSlider"
+            app:layout_constraintTop_toBottomOf="@+id/songPlayingSeekBarSlider" />
+
+        <TextView
+            android:id="@+id/songPlayingDurationTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/song_playing_duration_time"
+            android:textSize="@dimen/songPlayingDurationTimeTextSize"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_1"
+            app:layout_constraintEnd_toEndOf="@+id/songPlayingSeekBarSlider"
+            app:layout_constraintTop_toBottomOf="@+id/songPlayingSeekBarSlider" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

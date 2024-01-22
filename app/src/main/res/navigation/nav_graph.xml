@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.okation.aivideocreator.presentation.splashscreen.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_onBoardingScreenFragment"
+            app:destination="@id/onBoardingScreenFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingScreenFragment"
+        android:name="com.okation.aivideocreator.presentation.splashscreen.OnBoardingScreenFragment"
+        android:label="fragment_on_boarding_screen"
+        tools:layout="@layout/fragment_on_boarding_screen" >
+        <action
+            android:id="@+id/action_onBoardingScreenFragment_to_paymentScreenFragment"
+            app:destination="@id/paymentScreenFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_onBoardingScreenFragment_to_homeGeneratedListFragment"
+            app:destination="@id/homeGeneratedListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentScreenFragment"
+        android:name="com.okation.aivideocreator.presentation.payment.PaymentScreenFragment"
+        android:label="fragment_payment_screen"
+        tools:layout="@layout/fragment_payment_screen" >
+        <action
+            android:id="@+id/action_paymentScreenFragment_to_homeGeneratedListFragment"
+            app:destination="@id/homeGeneratedListFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_paymentScreenFragment_to_privacyFragment"
+            app:destination="@id/privacyFragment" />
+        <action
+            android:id="@+id/action_paymentScreenFragment_to_termsFragment"
+            app:destination="@id/termsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/songPlayingFragment"
+        android:name="com.okation.aivideocreator.presentation.song.SongPlayingFragment"
+        android:label="fragment_song_playing"
+        tools:layout="@layout/fragment_song_playing" >
+        <argument
+            android:name="voiceWhoPoster"
+            app:argType="integer" />
+        <argument
+            android:name="voiceWhoName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_songPlayingFragment_to_homeGeneratedListFragment"
+            app:destination="@id/homeGeneratedListFragment" />
+        <argument
+            android:name="voiceWhoUUID"
+            app:argType="string" />
+        <argument
+            android:name="voiceWhoWroteText"
+            app:argType="string" />
+        <argument
+            android:name="voiceWhoToken"
+            app:argType="string" />
+        <argument
+            android:name="voiceWhoMediaPath"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeChooseGenerateTypeFragment"
+        android:name="com.okation.aivideocreator.presentation.home.view.HomeChooseGenerateTypeFragment"
+        android:label="fragment_home_choose_generate_type"
+        tools:layout="@layout/fragment_home_choose_generate_type" >
+        <action
+            android:id="@+id/action_homeChooseGenerateTypeFragment_to_songPlayingFragment"
+            app:destination="@id/songPlayingFragment" />
+        <action
+            android:id="@+id/action_homeChooseGenerateTypeFragment_to_homeGeneratedListFragment"
+            app:destination="@id/homeGeneratedListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeGeneratedListFragment"
+        android:name="com.okation.aivideocreator.presentation.home.view.HomeGeneratedListFragment"
+        android:label="fragment_home_generated_list"
+        tools:layout="@layout/fragment_home_generated_list" >
+        <action
+            android:id="@+id/action_homeGeneratedListFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+             />
+        <action
+            android:id="@+id/action_homeGeneratedListFragment_to_homeChooseGenerateTypeFragment"
+            app:destination="@id/homeChooseGenerateTypeFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_homeGeneratedListFragment_to_songPlayingFragment"
+            app:destination="@id/songPlayingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.okation.aivideocreator.presentation.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_privacyFragment"
+            app:destination="@id/privacyFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_termsFragment"
+            app:destination="@id/termsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.okation.aivideocreator.presentation.privacyandterms.PrivacyFragment"
+        android:label="fragment_privacy"
+        tools:layout="@layout/fragment_privacy" />
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.okation.aivideocreator.presentation.privacyandterms.TermsFragment"
+        android:label="fragment_terms"
+        tools:layout="@layout/fragment_terms" />
+
+</navigation>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/background">
+        <shape>
+            <size android:height="6dp"/>
+            <corners android:radius="20dp"/>
+            <solid android:color="#33787880"/>
+        </shape>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <scale android:scaleWidth="100%">
+            <layer-list>
+                <!--<item>
+                    <shape>
+                        <corners
+                            android:bottomLeftRadius="20dp"
+                            android:topLeftRadius="20dp"/>
+                        <gradient
+                            android:endColor="#4F56FF"
+                            android:startColor="#B377FF"/>
+                    </shape>
+                </item>-->
+
+                <item>
+                    <shape>
+                        <corners
+                            android:bottomLeftRadius="48dp"
+                            android:topLeftRadius="48dp"/>
+                        <gradient
+                            android:angle="270"
+                            android:centerColor="#736E56FF"
+                            android:centerY="0.1"
+                            android:endColor="#736E56FF"
+                            android:startColor="#736E56FF"/>
+                    </shape>
+                </item>
+            </layer-list>
+        </scale>
+    </item>
+    <item android:id="@android:id/secondaryProgress"
+        android:height="6dp"
+        android:top="5dp"
+        android:bottom="5dp">
+        <clip
+            android:clipOrientation="horizontal"
+            android:gravity="left">
+
+            <shape android:shape="rectangle">
+                <solid android:color="#736E56FF"/> <!-- Shadow color -->
+                <corners android:radius="8dp" />
+            </shape>
+
+            <shape android:shape="rectangle">
+                <corners android:radius="24dp" />
+                <gradient
+                    android:angle="45"
+                    android:type="linear"
+                    android:endColor="#4F56FF"
+                    android:startColor="#B377FF"
+                    />
+            </shape>
+        </clip>
+
+    </item>
+</layer-list>

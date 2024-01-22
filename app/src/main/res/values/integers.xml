@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="home_generated_maxLines">1</integer>
+    <integer name="home_generated_contents_maxLines">1</integer>
+    <integer name="home_generate_button_shadow_radius">5</integer>
+</resources>
